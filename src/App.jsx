@@ -8,6 +8,8 @@ export default function App() {
   return (
     <div className="App">
       <Navbar/>
+      <Home/>
+      <About/>
       {/* <Routes>
         <Route path="/" element={ <Home/> } />
         <Route path="about" element={ <About/> } />
