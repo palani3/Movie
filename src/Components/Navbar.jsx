@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.jpg";
 import {FaBars} from 'react-icons/fa'
+import { Link } from "react-router-dom";
+
+
 
 export default function Navbar() {
     const [open ,setopen] = useState(false)
@@ -15,16 +18,16 @@ export default function Navbar() {
         <nav  className={`${open ? "block" :"hidden"} lg:flex lg:items-center lg:w-auto w-full`}>
           <ul className="lg:flex lg:justify-between text-base text-gray-700">
             <li>
-              <a className="lg:px-5 py-2 font-semibold hover:text-blue-700 block" href="/">Home</a>
+            <Link to="/" className="lg:px-5 py-2 font-semibold hover:text-blue-700 block">Home</Link>
             </li > 
             <li>  
-              <a className="lg:px-5 py-2 font-semibold hover:text-blue-700 block" href="/">Movies</a>
+            <Link to="/"className="lg:px-5 py-2 font-semibold hover:text-blue-700 block" href="/">Movies</Link>
             </li>
             <li> 
-              <a className="lg:px-5 py-2 font-semibold hover:text-blue-700 block" href="/">Search</a>
+            <Link to="/"className="lg:px-5 py-2 font-semibold hover:text-blue-700 block" href="/">Search</Link>
             </li>
             <li> 
-              <a className="lg:px-5 py-2 text-white bg-blue-700 rounded-full block text-center" href="/">Login</a>
+            <Link to="Login" className="lg:px-5 py-2 text-white bg-blue-700 rounded-full block text-center"> Login</Link>
             </li>
           </ul>
         </nav>

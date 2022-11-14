@@ -10,15 +10,18 @@ export default function App() {
   return (
     <div className="App">
       <Navbar/>
-      <Login/>
+      {/* <Login/>
       <Register/>
       <Home/>
-      <About/>
-      {/* <Routes>
+      <About/> */}
+      <Routes>
         <Route path="/" element={ <Home/> } />
+        <Route path="/Login" element={ <Login/> } />
+        <Route path="/Register" element={ <Register/> } />
+
         <Route path="about" element={ <About/> } />
         <Route path="contact" element={ <Contact/> } />
-      </Routes> */}
+      </Routes>
     </div>
   );
 }
