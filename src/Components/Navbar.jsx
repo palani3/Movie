@@ -23,12 +23,16 @@ export default function Navbar() {
             <li>  
             <Link to="/"className="lg:px-5 py-2 font-semibold hover:text-blue-700 block" href="/">Movies</Link>
             </li>
-            <li> 
-            <Link to="/"className="lg:px-5 py-2 font-semibold hover:text-blue-700 block" href="/">Search</Link>
+            <li>  
+            <Link to="/about"className="lg:px-5 py-2 font-semibold hover:text-blue-700 block" href="/">About</Link>
             </li>
+            {/* <li> 
+            <Link to="/"className="lg:px-5 py-2 font-semibold hover:text-blue-700 block" href="/">Search</Link>
+            </li> */}
             <li> 
             <Link to="Login" className="lg:px-5 py-2 text-white bg-blue-700 rounded-full block text-center"> Login</Link>
             </li>
+            
           </ul>
         </nav>
       </div>

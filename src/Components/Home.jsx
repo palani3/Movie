@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from './Redux/Counter';
 import HeroSection from './HeroSection';
+import MovieCard from './Card/MovieCard';
 
 
 export default function Home() {
@@ -34,7 +35,7 @@ export default function Home() {
     <Link to="contact">Click to view our contact page</Link>
 
 
-    <div>
+    <div className='sm:px-28 text-center'>
         <button
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
@@ -43,12 +44,21 @@ export default function Home() {
         </button>
         <span>{count}</span>
         <button
+        className='bg-sky-500 hover:bg-red-700'
           aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
         >
           Decrement
         </button>
       </div>
+      <div className='sm:text-center'>palani</div>
+      <MovieCard/>
+  
+
+
+      
+
+
   </div>
   )
 }
