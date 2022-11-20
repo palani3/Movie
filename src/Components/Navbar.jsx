@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
     const [open ,setopen] = useState(false)
   return (
-    <header className="border-b border-gray-300 py-2">
+    <header className="border-b border-gray-300 py-1">
       <div className="flex items-center justify-between container px-1 mx-auto flex-wrap w-full">
         <div className="flex justify-between items-center">
           <img className="w-12 h-12 mr-2 rounded-full" src={logo} alt="logo" />
