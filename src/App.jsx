@@ -9,19 +9,20 @@ import Register from "./Components/Auth/Register";
 export default function App() {
   return (
     <div className="App">
-      <Navbar/>
-      {/* <Login/>
-      <Register/>
-      <Home/>
-      <About/> */}
       <Routes>
-        <Route path="/" element={ <Home/> } />
+        <Route path="/" element={ <Navbar/> } />
         <Route path="/Login" element={ <Login/> } />
         <Route path="/Register" element={ <Register/> } />
 
         <Route path="about" element={ <About/> } />
         <Route path="contact" element={ <Contact/> } />
       </Routes>
+      {/* <Navbar/> */}
+      {/* <Login/>
+      <Register/>
+      <Home/>
+      <About/> */}
+      
     </div>
   );
 }

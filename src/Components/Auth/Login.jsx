@@ -2,17 +2,19 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 // import logo from "../assets/logo.jpg";
 import logo from '../../assets/logo.jpg'
+import Navbar from '../Navbar'
 
 export default function Login() {
   return (
     <div>
-        <section className="bg-gray-50 dark:bg-gray-900">
-  <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-      <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+        <section className="flex bg-gray-50 dark:bg-gray-900">
+        <div className='flex w-48 '><Navbar/></div>
+  <div className="flex w-auto flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+      <Link href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
           {/* <img className="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo"/> */}
           <img className="w-12 h-12 mr-2 rounded-full" src={logo} alt="logo" />
             
-      </a>
+      </Link>
       <p className='font-semibold text-gray-900 dark:text-white mb-5 flex items-center text-center text-2xl'>Welcome to Movie Rules</p>
       <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -48,6 +50,7 @@ export default function Login() {
           </div>
       </div>
   </div>
+ 
 </section>
     </div>
   )
