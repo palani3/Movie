@@ -70,9 +70,9 @@ export default function Navbar() {
             color={"red"}
            
             className="cursor-pointer "
-            onClick={() => {
-              setopen(!open);
-            }}
+            // onClick={() => {
+            //   setopen(!open);
+            // }}
           />
           {/* <p className='text-gray-50'>sasdasdasdsadss</p> */}
         </div>

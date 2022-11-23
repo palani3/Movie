@@ -8,7 +8,7 @@ export default function Login() {
   return (
     <div>
         <section className="flex bg-gray-50 dark:bg-gray-900">
-        <div className='flex w-48 '><Navbar/></div>
+        <div className='flex w-16 '><Navbar/></div>
   <div className="flex w-auto flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
       <Link href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
           {/* <img className="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo"/> */}
