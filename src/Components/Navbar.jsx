@@ -63,6 +63,7 @@ export default function Navbar() {
     // </header>
     <section className="flex  ">
       <div
+      // w-48
         className={` min-h-screen ${open ? "w-48" : "w-16"} duration-500  px-2 pb-5`}
       >
         <div className="py-3 flex justify-end ">
@@ -70,14 +71,14 @@ export default function Navbar() {
             size={26}
             color={"red"}
            
-            className="cursor-pointer "
+            className="cursor-pointer fixed "
             // onClick={() => {
             //   setopen(!open);
             // }}
           />
           {/* <p className='text-gray-50'>sasdasdasdsadss</p> */}
         </div>
-        <div className="mt-4 flex flex-col gap-9  relative">
+        <div className="mt-4 flex flex-col gap-9  fixed">
           {Menus?.map((menu, i) => (
             <Link
               to={menu.link}
