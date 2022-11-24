@@ -13,6 +13,7 @@ import { FaLanguage } from "react-icons/fa";
 import { FiMessageSquare, FiFolder, FiShoppingCart,FiSearch } from "react-icons/fi";
 import { TbReportAnalytics } from "react-icons/tb";
 import { RiSettings4Line ,RiMovie2Line} from "react-icons/ri";
+import Newmovies from "../pages/Newmovies";
 
 
 
@@ -20,7 +21,7 @@ export default function Navbar() {
     // const [open ,setopen] = useState(false)
     const [open, setopen] = useState(false);
   const Menus = [
-    { name: "New Movies", link: "/", icon: RiMovie2Line },
+    { name: "New Movies", link: "/Newmovies", icon: RiMovie2Line },
     { name: "Trending Movies", link: "/", icon: MdLocalMovies },   
     { name: "Search Movies", link: "/", icon: FiSearch },
     { name: "Saved Movies", link: "/", icon: AiOutlineHeart },

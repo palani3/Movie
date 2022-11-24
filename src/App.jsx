@@ -6,6 +6,8 @@ import { Routes, Route } from "react-router-dom"
 import Navbar from "./Components/Navbar";
 import Login from "./Components/Auth/Login";
 import Register from "./Components/Auth/Register";
+import Newmovies from "./pages/Newmovies";
+
 export default function App() {
   return (
     <div className="App">
@@ -16,6 +18,7 @@ export default function App() {
 
         <Route path="about" element={ <About/> } />
         <Route path="contact" element={ <Contact/> } />
+        <Route path="Newmovies" element={ <Newmovies/> } />
       </Routes>
       {/* <Navbar/> */}
       {/* <Login/>
