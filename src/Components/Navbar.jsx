@@ -64,10 +64,10 @@ export default function Navbar() {
     <section className="flex  ">
       <div
       // w-48
-        className={` min-h-screen ${open ? "w-48" : "w-16"} duration-500  px-2 pb-5`}
+        className={` min-h-screen ${open ? "w-48" : "w-10"} duration-500  px-2 pb-5`}
       >
-        <div className="py-3 flex justify-end ">
-          <HiMenuAlt3
+        <div className="pb-3 flex justify-end ">
+          {/* <HiMenuAlt3
             size={26}
             color={"red"}
            
@@ -75,7 +75,7 @@ export default function Navbar() {
             // onClick={() => {
             //   setopen(!open);
             // }}
-          />
+          /> */}
           {/* <p className='text-gray-50'>sasdasdasdsadss</p> */}
         </div>
         <div className="mt-4 flex flex-col gap-9  fixed">
