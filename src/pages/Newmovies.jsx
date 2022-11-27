@@ -1,8 +1,17 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 import Trendingmovie from "../Components/Subpage/Trendingmovie";
 
 export default function Newmovies() {
+  const [data,setdata]=useState([]);
+
+  useEffect(()=>{
+
+    axios.get('https://jsonplaceholder.typicode.com/users')
+    .then((res)=>setdata(res.data))
+    console.log(data);
+  },[])
   return (
     <section className=" bg-gray-50 dark:bg-gray-900">
       <div className="flex">
@@ -29,6 +38,7 @@ export default function Newmovies() {
               <div>03</div>
             </div>
           </div>
+          {data.map((data,index)=>(<p key={index}>{data.name}</p>))}
           
         </div>
       </div>
