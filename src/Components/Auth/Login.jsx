@@ -1,10 +1,28 @@
+import axios from 'axios'
 import React from 'react'
+import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 // import logo from "../assets/logo.jpg";
 import logo from '../../assets/logo.jpg'
 import Navbar from '../Navbar'
 
+
 export default function Login() {
+ const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+    
+
+    const loginForm = (data)=>{
+        console.log(JSON.stringify(data));
+        
+
+    axios.post('http://localhost:5000/api/user/signin',data).then((res)=>{console.log("datas",res)})
+       
+    }
+
   return (
     <div>
         <section className="flex bg-gray-50 dark:bg-gray-900">
@@ -21,14 +39,16 @@ export default function Login() {
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                   Sign in to your account
               </h1>
-              <form className="space-y-4 md:space-y-6" action="#">
+              <form onSubmit={handleSubmit(loginForm)} className="space-y-4 md:space-y-6" >
                   <div>
                       <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                      <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required=""/>
+                      <input {...register('email',{required:true})} type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required=""/>
+                      {errors.email && <p>Email  is required.</p>}
                   </div>
                   <div>
                       <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                      <input type="password" name="password" id="password" placeholder="" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                      <input {...register('password',{required:true})}  type="password" name="password" id="password" placeholder="" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""/>
+                      {errors.password && <p>password  is required.</p>}
                   </div>
                   <div className="flex items-center justify-between">
                       <div className="flex items-start">
