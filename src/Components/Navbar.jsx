@@ -22,9 +22,9 @@ export default function Navbar() {
     const [open, setopen] = useState(false);
   const Menus = [
     { name: "New Movies", link: "/Newmovies", icon: RiMovie2Line },
-    { name: "Trending Movies", link: "/", icon: MdLocalMovies },   
-    { name: "Search Movies", link: "/", icon: FiSearch },
-    { name: "Saved Movies", link: "/", icon: AiOutlineHeart },
+    { name: "Trending Movies", link: "/TrendMovie", icon: MdLocalMovies },   
+    { name: "Search Movies", link: "/SearchMovie", icon: FiSearch },
+    { name: "Saved Movies", link: "/Favorite", icon: AiOutlineHeart },
     { name: "Language", link: "/", icon: FaLanguage },
     { name: "subscription", link: "/", icon: MdSubscriptions },
     { name: "User", link: "/Login", icon: AiOutlineUser },
