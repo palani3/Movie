@@ -1,13 +1,18 @@
 import axios from 'axios'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { useSelector,useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 // import logo from "../assets/logo.jpg";
 import logo from '../../assets/logo.jpg'
 import Navbar from '../Navbar'
+import {AuthToken} from '../Redux/AuthSlice'
+
 
 
 export default function Login() {
+    const Token = useSelector(state => state.Auth.Token)
+    const dispatch =useDispatch();
  const {
     register,
     handleSubmit,
@@ -15,11 +20,23 @@ export default function Login() {
   } = useForm();
     
 
-    const loginForm = (data)=>{
+    const loginForm = async(data)=>{
         console.log(JSON.stringify(data));
         
+        // dispatch(AuthToken(res.data))
+  const res=await axios.post('http://localhost:5000/api/user/signin',data)
+   
+    if(res.status === 200)
+    {
+        localStorage.setItem('token',res.data)
+        dispatch(AuthToken(res.data))
 
-    axios.post('http://localhost:5000/api/user/signin',data).then((res)=>{console.log("datas",res)})
+      
+    }else
+    {
+        console.log("something wrong")
+    }
+   
        
     }
 
@@ -64,7 +81,7 @@ export default function Login() {
                   {/* text-white */}
                   <button type="submit" className="w-full  bg-blue-600 text-white  hover:bg-rose-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                      Don’t have an account yet? <Link to="/Register" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</Link>
+                    {Token}  Don’t have an account yet? <Link to="/Register" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</Link>
                   </p>
               </form>
           </div>
