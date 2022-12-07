@@ -17,7 +17,7 @@ export default function TrendingMovies() {
             </a>
            
           </div>
-          <p>Im palani i will get 10LP more enjoy the ride maga you will achive</p>
+          <p>Im palani sad will get 10LP more enjoy the ride maga you will achive</p>
 
         </div>
       </section>
